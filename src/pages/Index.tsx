@@ -40,7 +40,7 @@ const Index = () => {
             Course Roadmap Generator
           </h1>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Get a personalized learning path powered by AI
+            Interactive Website
           </p>
         </div>
 

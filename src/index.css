@@ -50,23 +50,23 @@
   }
 
   .glassmorphism {
-    @apply bg-white/20 backdrop-blur-xl border border-white/30 shadow-lg;
+    @apply bg-white/20 backdrop-blur-xl border border-white/30 shadow-lg transition-all duration-300 hover:shadow-xl;
   }
 
   .input-field {
-    @apply glassmorphism w-full px-4 py-3 rounded-xl text-foreground placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all duration-300;
+    @apply glassmorphism w-full px-4 py-3 rounded-xl text-foreground placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all duration-300 hover:bg-white/30;
   }
 
   .btn-primary {
-    @apply bg-white text-accent hover:text-accent/90 font-medium rounded-xl px-6 py-3 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98];
+    @apply bg-white text-accent hover:text-white hover:bg-purple-600 font-medium rounded-xl px-6 py-3 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98];
   }
 
   .form-label {
-    @apply flex items-center text-sm font-medium text-white/90 mb-2 gap-2;
+    @apply flex items-center text-sm font-medium text-white/90 mb-2 gap-2 transition-all duration-300 hover:text-white;
   }
 
   .tag {
-    @apply bg-white/30 px-3 py-1 rounded-full text-xs font-medium text-white backdrop-blur-sm;
+    @apply bg-white/30 px-3 py-1 rounded-full text-xs font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-purple-500/50;
   }
 }
 
@@ -86,3 +86,23 @@
 .animate-delay-4 {
   animation-delay: 0.4s;
 }
+
+/* Interactive elements */
+.hover-scale {
+  @apply transition-transform duration-200 hover:scale-105;
+}
+
+.pulse {
+  @apply animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite];
+}
+
+/* Input field animations */
+input:focus, select:focus {
+  @apply ring-2 ring-purple-500 transform scale-[1.01] transition-all duration-300;
+}
+
+/* Button hover effects */
+button:hover {
+  @apply transform scale-[1.05] transition-all duration-300;
+}
+
